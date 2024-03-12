@@ -168,10 +168,10 @@ export const classList = {
     ".border-separate": { "border-collapse": "separate" },
   },
   borderSpacing: {
-    defaults: JSON.parse(`{
-      "${env.varPrefix}-border-spacing-x": 0,
-      "${env.varPrefix}-border-spacing-y": 0,
-    }`),
-  }
+    defaults: {
+      "--sg-border-spacing-x": 0,
+      "--sg-border-spacing-y": 0,
+    }
+  },
 
 }

@@ -8,9 +8,9 @@
     }
   },
   "jsc": {
-    "target": "es2016",
-     "parser": {
-       "syntax": "typescript"
-     }
+    "parser": {
+      "syntax": "typescript",
+      "tsx": false
+    }
   }
 }

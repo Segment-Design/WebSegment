@@ -177,30 +177,33 @@ export const corePlugins: corePluginsOptions = {
   captionSide: ({ addUtilities }: accessibilityOptions) => addUtilities({...classList.captionSide}),
   borderCollapse: ({ addUtilities }: accessibilityOptions) => addUtilities({...classList.borderCollapse}),
   borderSpacing: ({ addDefaults, matchUtilities, theme }) => {
-    addDefaults("border-spacing", {...classList.borderSpacing.defaults});
+    addDefaults("border-spacing", {...classList.borderSpacing});
 
     matchUtilities({
         "border-spacing": (value: any) => {
-          return JSON.parse(`{
-            "${env.varPrefix}-border-spacing-x": ${value},
-            "${env.varPrefix}-border-spacing-y": value,
+          return {
+            "--sg-border-spacing-x": value,
+            "--sg-border-spacing-y": value,
             "@defaults border-spacing": {},
-            "border-spacing": "var(${env.varPrefix}-border-spacing-x) var(${env.varPrefix}-border-spacing-y)",
-          }`);
+            "border-spacing":
+              "var(--sg-border-spacing-x) var(--sg-border-spacing-y)",
+          };
         },
         "border-spacing-x": (value: any) => {
-          return JSON.parse(`{
-            "${env.varPrefix}-border-spacing-x": ${value},
+          return {
+            "--sg-border-spacing-x": value,
             "@defaults border-spacing": {},
-            "border-spacing": "var(${env.varPrefix}-border-spacing-x) var(${env.varPrefix}-border-spacing-y)",
-          }`);
+            "border-spacing":
+              "var(--sg-border-spacing-x) var(--sg-border-spacing-y)",
+          };
         },
         "border-spacing-y": (value: any) => {
-          return JSON.parse(`{
-            "${env.varPrefix}-border-spacing-y": ${value},
+          return {
+            "--sg-border-spacing-y": value,
             "@defaults border-spacing": {},
-            "border-spacing": "var(${env.varPrefix}-border-spacing-x) var(${env.varPrefix}-border-spacing-y)",
-          }`);
+            "border-spacing":
+              "var(--sg-border-spacing-x) var(--sg-border-spacing-y)",
+          };
         },
       },
       { values: theme("borderSpacing") },

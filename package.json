@@ -4,10 +4,11 @@
   "description": "A post-modern CSS library for rapidly building modern, responsive web interfaces and streamline your web development workflow with a comprehensive set of CSS utility classes",
   "main": "lib/index.js",
   "scripts": {
-    "build": "npm run segmentize && rimraf lib",
+    "prebuild": "npm run segmentize && rimraf lib",
+    "build": "swc src --out-dir lib --copy-files",
     "segmentize": "npm run segmentize:build && npm run segmentize:types",
     "segmentize:build": "node -r @swc-node/register scripts/generate-plugin-list.ts",
-    "segmentize:types": "",
+    "segmentize:types": "node -r @swc-node/register scripts/generate-types.ts",
     "lint": "pnpm eslint ."
   },
   "keywords": [
@@ -38,6 +39,7 @@
     "postcss-load-config": "^5.0.3",
     "postcss-nested": "^6.0.1",
     "postcss-selector-parser": "^6.0.15",
+    "prettier": "^3.2.5",
     "rimraf": "^5.0.5",
     "typescript": "^5.4.2"
   }
