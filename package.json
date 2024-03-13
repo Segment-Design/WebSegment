@@ -1,15 +1,10 @@
 {
-  "name": "@segmentdesign/websegment",
-  "version": "1.0.0",
-  "description": "A post-modern CSS library for rapidly building modern, responsive web interfaces and streamline your web development workflow with a comprehensive set of CSS utility classes",
+  "name": "@websegment/root",
+  "version": "0.0.0",
+  "description": "A modern CSS library for rapidly building modern, responsive web interfaces and streamline your web development workflow with a comprehensive set of CSS utility classes",
   "main": "lib/index.js",
   "scripts": {
-    "prebuild": "npm run segmentize && rimraf lib",
-    "build": "swc src --out-dir lib --copy-files",
-    "segmentize": "npm run segmentize:build && npm run segmentize:types",
-    "segmentize:build": "node -r @swc-node/register scripts/generate-plugin-list.ts",
-    "segmentize:types": "node -r @swc-node/register scripts/generate-types.ts",
-    "lint": "pnpm eslint ."
+    "lint": "pnpm dlx @biomejs/biome lint --apply ./src"
   },
   "keywords": [
     "CSS",
@@ -25,22 +20,7 @@
   "author": "@Stuffincode - Riaz Ahamed <https://www.riazahamed.io>",
   "license": "MIT",
   "devDependencies": {
-    "@swc-node/register": "^1.9.0",
-    "@swc/cli": "^0.3.10",
-    "@swc/core": "^1.4.5",
-    "@swc/jest": "^0.2.36",
-    "@types/node": "^20.11.25",
-    "@typescript-eslint/eslint-plugin": "^7.1.1",
-    "@typescript-eslint/parser": "^7.1.1",
-    "eslint": "^8.57.0",
-    "postcss": "^8.4.35",
-    "postcss-import": "^16.0.1",
-    "postcss-js": "^4.0.1",
-    "postcss-load-config": "^5.0.3",
-    "postcss-nested": "^6.0.1",
-    "postcss-selector-parser": "^6.0.15",
-    "prettier": "^3.2.5",
-    "rimraf": "^5.0.5",
-    "typescript": "^5.4.2"
+    "@biomejs/biome": "1.6.0",
+    "@types/node": "^20.11.26"
   }
 }

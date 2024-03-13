@@ -1,0 +1,13 @@
+[package]
+name = "websegment-core"
+version = "0.0.0"
+edition = "2021"
+
+[[bench]]
+name = "parse_segments"
+harness = false
+
+[[bench]]
+name = "scan_file_segments"
+harness = false
+

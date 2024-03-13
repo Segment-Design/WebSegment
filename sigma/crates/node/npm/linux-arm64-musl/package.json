@@ -1,0 +1,30 @@
+{
+  "name": "@websegment/sigma-linux-arm64-musl",
+  "version": "4.0.0-alpha.7",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Segment-Design/WebSegment.git",
+    "directory": "oxide/crates/node/npm/linux-arm64-musl"
+  },
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "arm64"
+  ],
+  "main": "websegment-sigma.linux-arm64-musl.node",
+  "files": [
+    "websegment-sigma.linux-arm64-musl.node"
+  ],
+  "publishConfig": {
+    "provenance": true,
+    "access": "public"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">= 10"
+  },
+  "libc": [
+    "musl"
+  ]
+}

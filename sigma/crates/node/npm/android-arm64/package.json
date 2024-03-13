@@ -1,0 +1,27 @@
+{
+  "name": "@websegment/sigma-android-arm64",
+  "version": "4.0.0-alpha.7",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Segment-Design/WebSegment.git",
+    "directory": "sigma/crates/node/npm/android-arm64"
+  },
+  "os": [
+    "android"
+  ],
+  "cpu": [
+    "arm64"
+  ],
+  "main": "websegment-sigma.android-arm64.node",
+  "files": [
+    "websegment-sigma.android-arm64.node"
+  ],
+  "publishConfig": {
+    "provenance": true,
+    "access": "public"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">= 10"
+  }
+}
