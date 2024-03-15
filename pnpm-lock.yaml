@@ -128,6 +128,9 @@ importers:
       lightningcss:
         specifier: ^1.24.0
         version: 1.24.1
+      playwright:
+        specifier: ^1.42.1
+        version: 1.42.1
       tsup:
         specifier: ^8.0.1
         version: 8.0.2(postcss@8.4.24)(typescript@5.4.2)
