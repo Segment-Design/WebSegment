@@ -1,6 +1,6 @@
 {
   "name": "@websegment/root",
-  "version": "0.0.0",
+  "version": "1.0.0-alpha.2",
   "description": "A modern CSS library for rapidly building modern, responsive web interfaces and streamline your web development workflow with a comprehensive set of CSS utility classes",
   "repository": {
     "type": "git",

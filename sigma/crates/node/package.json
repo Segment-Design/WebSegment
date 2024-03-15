@@ -1,6 +1,6 @@
 {
   "name": "@websegment/sigma",
-  "version": "0.0.0",
+  "version": "1.0.0-alpha.2",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/segment-design/websegment.git",
@@ -36,7 +36,6 @@
     "index.d.ts"
   ],
   "publishConfig": {
-    "provenance": true,
     "access": "public"
   },
   "scripts": {

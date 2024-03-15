@@ -1,6 +1,6 @@
 {
   "name": "@websegment/vite",
-  "version": "4.0.0-alpha.9",
+  "version": "1.0.0-alpha.2",
   "description": "A utility-first CSS framework for rapidly building custom user interfaces.",
   "license": "MIT",
   "repository": {
@@ -18,7 +18,6 @@
     "dist/"
   ],
   "publishConfig": {
-    "provenance": true,
     "access": "public"
   },
   "exports": {
