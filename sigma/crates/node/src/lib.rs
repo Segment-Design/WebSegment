@@ -1,4 +1,3 @@
-use napi::bindgen_prelude::{FromNapiValue, ToNapiValue};
 use std::path::PathBuf;
 
 #[macro_use]

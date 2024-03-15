@@ -579,15 +579,6 @@ exports[`\`@import 'websegment'\` is replaced with the generated CSS 1`] = `
 @layer components;
 
 @layer utilities {
-  .text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
-  .text-black\\/50 {
-    color: #00000080;
-  }
-
   .underline {
     text-decoration-line: underline;
   }

@@ -15,20 +15,20 @@
   },
   "exports": {
     ".": {
-      "style": "./css/index.css",
+      "style": "./index.css",
       "types": "./src/index.ts",
       "require": "./dist/lib.js",
       "import": "./src/index.ts"
     },
     "./package.json": "./package.json",
-    "./css/index.css": "./css/index.css",
-    "./index": "./css/index.css",
-    "./css/preflight.css": "./css/preflight.css",
-    "./preflight": "./css/preflight.css",
-    "./css/theme.css": "./css/theme.css",
-    "./theme": "./css/theme.css",
-    "./css/utilities.css": "./css/utilities.css",
-    "./utilities": "./css/utilities.css"
+    "./index.css": "./index.css",
+    "./index": "./index.css",
+    "./preflight..css": "./preflight..css",
+    "./preflight": "./preflight..css",
+    "./theme..css": "./theme..css",
+    "./theme": "./theme..css",
+    "./utllities.css": "./utllities.css",
+    "./utilities": "./utllities.css"
   },
   "publishConfig": {
     "provenance": true,
@@ -36,19 +36,19 @@
     "exports": {
       ".": {
         "types": "./dist/lib.d.mts",
-        "style": "./css/index.css",
+        "style": "./index.css",
         "require": "./dist/lib.js",
         "import": "./dist/lib.mjs"
       },
       "./package.json": "./package.json",
-      "./css/index.css": "./css/index.css",
-      "./index": "./css/index.css",
-      "./css/preflight.css": "./css/preflight.css",
-      "./preflight": "./css/preflight.css",
-      "./css/theme.css": "./css/theme.css",
-      "./theme": "./css/theme.css",
-      "./css/utilities.css": "./css/utilities.css",
-      "./utilities": "./css/utilities.css"
+      "./index.css": "./index.css",
+      "./index": "./index.css",
+      "./preflight..css": "./preflight..css",
+      "./preflight": "./preflight..css",
+      "./theme..css": "./theme..css",
+      "./theme": "./theme..css",
+      "./utllities.css": "./utllities.css",
+      "./utilities": "./utllities.css"
     }
   },
   "style": "css/index.css",
