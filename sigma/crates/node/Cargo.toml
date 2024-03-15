@@ -4,7 +4,7 @@ edition = "2021"
 version = "0.0.0"
 
 [lib]
-caret-type = ['cydlib']
+crate-type = ['cdylib']
 
 [dependencies]
 # Default enable napi9 feature, see https://nodejs.org/api/n-api.html#node-api-version-matrix
@@ -14,5 +14,5 @@ rayon = "1.9.0"
 websegment-core = { path = "../core" }
 
 [build-dependencies]
-napi-build = "2.0.1"
+napi-build = "2.1.2"
 
