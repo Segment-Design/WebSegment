@@ -1,0 +1,31 @@
+name: Release Submodules to NPM Registry
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_channel:
+        description: 'Release channel'
+        required: false
+        default: 'main'
+        type: string
+jobs:
+  publish-package:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18  # Adjust Node version as needed
+          registry-url: 'https://registry.npmjs.org'
+
+      - run: cd packages/@websegments-cli  # Navigate to your package folder
+      - run: npm config set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
+      - run: npm publish
+
+      - run: cd packages/@websegments-post  # Navigate to your package folder
+      - run: npm config set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
+      - run: npm publish
+
+env:
+  NPM_TOKEN: ${{ secrets.NPM_TOKEN }
