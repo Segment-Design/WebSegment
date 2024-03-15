@@ -1,0 +1,44 @@
+{
+  "name": "@websegment/cli",
+  "version": "4.0.0-alpha.9",
+  "description": "A utility-first CSS framework for rapidly building custom user interfaces.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/segment-design/websegment.git",
+    "directory": "packages/@websegment-cli"
+  },
+  "bugs": "https://github.com/segment-design/websegment/issues",
+  "homepage": "https://websegment.com",
+  "scripts": {
+    "lint": "tsc --noEmit",
+    "build": "tsup-node ./src/index.ts --format esm --minify --clean",
+    "dev": "pnpm run build -- --watch"
+  },
+  "bin": {
+    "websegment": "./dist/index.mjs"
+  },
+  "exports": {
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "provenance": true,
+    "access": "public"
+  },
+  "dependencies": {
+    "@parcel/watcher": "^2.4.1",
+    "@websegment/sigma": "workspace:^",
+    "lightningcss": "^1.24.0",
+    "mri": "^1.2.0",
+    "picocolors": "^1.0.0",
+    "postcss": "8.4.24",
+    "postcss-import": "^16.0.0",
+    "websegment": "workspace:^"
+  },
+  "devDependencies": {
+    "@types/postcss-import": "^14.0.3"
+  }
+}

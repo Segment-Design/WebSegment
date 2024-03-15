@@ -1,0 +1,39 @@
+{
+  "name": "@websegment/vite",
+  "version": "4.0.0-alpha.9",
+  "description": "A utility-first CSS framework for rapidly building custom user interfaces.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/segment-design/websegment.git",
+    "directory": "packages/@websegment-vite"
+  },
+  "bugs": "https://github.com/segment-design/websegment/issues",
+  "homepage": "https://websegment.com",
+  "scripts": {
+    "build": "tsup-node ./src/index.ts --format esm --dts --minify --clean",
+    "dev": "pnpm run build -- --watch"
+  },
+  "files": [
+    "dist/"
+  ],
+  "publishConfig": {
+    "provenance": true,
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "dependencies": {
+    "@websegment/sigma": "workspace:^",
+    "lightningcss": "^1.24.0",
+    "websegment": "workspace:^"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "vite": "^5.0.11"
+  }
+}
