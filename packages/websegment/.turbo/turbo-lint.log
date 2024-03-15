@@ -1,0 +1,28 @@
+
+
+> websegment@0.0.0 lint /Volumes/Development/projects/WebSegment/packages/websegment
+> tsc --noEmit
+
+[96msrc/index.test.ts[0m:[93m4[0m:[93m33[0m - [91merror[0m[90m TS2307: [0mCannot find module './test-utils/run' or its corresponding type declarations.
+
+[7m4[0m import { compileCss, run } from './test-utils/run'
+[7m [0m [91m                                ~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/utilities.test.ts[0m:[93m2[0m:[93m33[0m - [91merror[0m[90m TS2307: [0mCannot find module './test-utils/run' or its corresponding type declarations.
+
+[7m2[0m import { compileCss, run } from './test-utils/run'
+[7m [0m [91m                                ~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/variants.test.ts[0m:[93m2[0m:[93m33[0m - [91merror[0m[90m TS2307: [0mCannot find module './test-utils/run' or its corresponding type declarations.
+
+[7m2[0m import { compileCss, run } from './test-utils/run'
+[7m [0m [91m                                ~~~~~~~~~~~~~~~~~~[0m
+
+
+Found 3 errors in 3 files.
+
+Errors  Files
+     1  src/index.test.ts[90m:4[0m
+     1  src/utilities.test.ts[90m:2[0m
+     1  src/variants.test.ts[90m:2[0m
+[41m[30m ELIFECYCLE [39m[49m [31mCommand failed with exit code 2.[39m
