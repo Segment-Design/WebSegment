@@ -1,9 +1,9 @@
 {
   "name": "@websegment/sigma",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tailwindlabs/websegment.git",
+    "url": "git+https://github.com/segment-design/websegment.git",
     "directory": "sigma/crates/node"
   },
   "main": "index.js",

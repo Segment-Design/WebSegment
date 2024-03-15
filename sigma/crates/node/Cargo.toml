@@ -11,6 +11,8 @@ caret-type = ['cydlib']
 napi = {version = "2.16.0", default-features = false, features = ["napi9"]}
 napi-derive = "2.16.0"
 rayon = "1.9.0"
-websegment-core = "../core"
+websegment-core = { path = "../core" }
 
+[build-dependencies]
+napi-build = "2.0.1"
 

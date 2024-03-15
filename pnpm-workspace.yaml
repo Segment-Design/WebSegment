@@ -1,0 +1,4 @@
+packages:
+  - 'sigma/crates/node'
+  - 'sigma/crates/node/npm/*'
+  - 'packages/*'

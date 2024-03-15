@@ -1,0 +1,68 @@
+{
+  "name": "websegment",
+  "version": "0.0.0",
+  "description": "A modern CSS library for rapidly building modern, responsive web interfaces and streamline your web development workflow with a comprehensive set of CSS utility classes",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/segmentdesign/websegment.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "lint": "tsc --noEmit",
+    "build": "tsup-node --env.NODE_ENV production",
+    "dev": "tsup-node --env.NODE_ENV development --watch",
+    "test:ui": "playwright test"
+  },
+  "exports": {
+    ".": {
+      "style": "./css/index.css",
+      "types": "./src/index.ts",
+      "require": "./dist/lib.js",
+      "import": "./src/index.ts"
+    },
+    "./package.json": "./package.json",
+    "./css/index.css": "./css/index.css",
+    "./index": "./css/index.css",
+    "./css/preflight.css": "./css/preflight.css",
+    "./preflight": "./css/preflight.css",
+    "./css/theme.css": "./css/theme.css",
+    "./theme": "./css/theme.css",
+    "./css/utilities.css": "./css/utilities.css",
+    "./utilities": "./css/utilities.css"
+  },
+  "publishConfig": {
+    "provenance": true,
+    "access": "public",
+    "exports": {
+      ".": {
+        "types": "./dist/lib.d.mts",
+        "style": "./css/index.css",
+        "require": "./dist/lib.js",
+        "import": "./dist/lib.mjs"
+      },
+      "./package.json": "./package.json",
+      "./css/index.css": "./css/index.css",
+      "./index": "./css/index.css",
+      "./css/preflight.css": "./css/preflight.css",
+      "./preflight": "./css/preflight.css",
+      "./css/theme.css": "./css/theme.css",
+      "./theme": "./css/theme.css",
+      "./css/utilities.css": "./css/utilities.css",
+      "./utilities": "./css/utilities.css"
+    }
+  },
+  "style": "css/index.css",
+  "files": [
+    "dist",
+    "css/index.css",
+    "css/preflight.css",
+    "css/theme.css",
+    "css/utilities.css"
+  ],
+  "devDependencies": {
+    "@types/node": "^20.10.8",
+    "@websegment/sigma": "workspace:^",
+    "lightningcss": "^1.24.0",
+    "tsup": "^8.0.2"
+  }
+}
