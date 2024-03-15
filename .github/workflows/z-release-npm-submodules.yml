@@ -22,10 +22,11 @@ jobs:
       - run: cd packages/@websegments-cli  # Navigate to your package folder
       - run: npm config set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
       - run: npm publish
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }
 
-      - run: cd packages/@websegments-post  # Navigate to your package folder
+      - run: cd packages/@websegments-postcss  # Navigate to your package folder
       - run: npm config set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
       - run: npm publish
-
-env:
-  NPM_TOKEN: ${{ secrets.NPM_TOKEN }
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }
