@@ -34,7 +34,7 @@ type PluginOptions = {
   optimize?: boolean | { minify?: boolean }
 }
 
-function tailwindcss(opts: PluginOptions = {}): AcceptedPlugin {
+function websegment(opts: PluginOptions = {}): AcceptedPlugin {
   let base = opts.base ?? process.cwd()
   let optimize = opts.optimize ?? process.env.NODE_ENV === 'production'
 
@@ -48,7 +48,7 @@ function tailwindcss(opts: PluginOptions = {}): AcceptedPlugin {
   })
 
   return {
-    postcssPlugin: '@tailwindcss/postcss',
+    postcssPlugin: '@websegment/postcss',
     plugins: [
       // We need to run `postcss-import` first to handle `@import` rules.
       postcssImport(),
@@ -84,22 +84,22 @@ function tailwindcss(opts: PluginOptions = {}): AcceptedPlugin {
         }
 
         let hasApply = false
-        let hasTailwind = false
+        let hasWebSegment = false
 
         root.walkAtRules((rule) => {
           if (rule.name === 'apply') {
             hasApply = true
-          } else if (rule.name === 'tailwind') {
+          } else if (rule.name === 'websegment') {
             hasApply = true
-            hasTailwind = true
-            // If we've found `@tailwind` then we already
+            hasWebSegment = true
+            // If we've found `@websegment` then we already
             // know we have to run a "full" build
             return false
           }
         })
 
-        // Do nothing if neither `@tailwind` nor `@apply` is used
-        if (!hasTailwind && !hasApply) return
+        // Do nothing if neither `@websegment` nor `@apply` is used
+        if (!hasWebSegment && !hasApply) return
 
         let css = ''
 
@@ -110,7 +110,7 @@ function tailwindcss(opts: PluginOptions = {}): AcceptedPlugin {
         for (let file of files) {
           result.messages.push({
             type: 'dependency',
-            plugin: '@tailwindcss/postcss',
+            plugin: '@websegment/postcss',
             file,
             parent: result.opts.from,
           })
@@ -122,7 +122,7 @@ function tailwindcss(opts: PluginOptions = {}): AcceptedPlugin {
         for (let { base, glob } of globs) {
           result.messages.push({
             type: 'dir-dependency',
-            plugin: '@tailwindcss/postcss',
+            plugin: '@websegment/postcss',
             dir: base,
             glob,
             parent: result.opts.from,
@@ -132,7 +132,7 @@ function tailwindcss(opts: PluginOptions = {}): AcceptedPlugin {
         if (rebuildStrategy === 'full') {
           let { build } = compile(root.toString())
           context.build = build
-          css = build(hasTailwind ? candidates : [])
+          css = build(hasWebSegment ? candidates : [])
         } else if (rebuildStrategy === 'incremental') {
           css = context.build!(candidates)
         }
@@ -175,4 +175,4 @@ function optimizeCss(
   }).code.toString()
 }
 
-export default Object.assign(tailwindcss, { postcss: true }) as PluginCreator<PluginOptions>
+export default Object.assign(websegment, { postcss: true }) as PluginCreator<PluginOptions>

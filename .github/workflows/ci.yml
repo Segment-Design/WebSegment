@@ -42,16 +42,16 @@ jobs:
             target/
           key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
 
-      # Cache the `oxide` Rust build
-      - name: Cache oxide build
+      # Cache the `sigma` Rust build
+      - name: Cache sigma build
         uses: actions/cache@v3
         with:
           path: |
-            ./oxide/target/
-            ./oxide/crates/node/*.node
-            ./oxide/crates/node/index.js
-            ./oxide/crates/node/index.d.ts
-          key: ${{ runner.os }}-oxide-${{ hashFiles('./oxide/crates/**/*') }}
+            ./sigma/target/
+            ./sigma/crates/node/*.node
+            ./sigma/crates/node/index.js
+            ./sigma/crates/node/index.d.ts
+          key: ${{ runner.os }}-sigma-${{ hashFiles('./sigma/crates/**/*') }}
 
       - name: Install dependencies
         run: pnpm install

@@ -148,7 +148,7 @@ jobs:
   release:
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    name: Build and release Tailwind CSS
+    name: Build and release Web Segment
 
     permissions:
       contents: read
@@ -197,7 +197,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install --ignore-scripts --filter=!./playgrounds/*
 
-      - name: Build Tailwind CSS
+      - name: Build Web Segment
         run: pnpm run build
 
       - name: Download artifacts
